@@ -3,12 +3,12 @@
 // **************************************
 
 
-// ~ip = "192.168.1.5"; // iPad IP address (home)
+// ~ip = "192.168.1.8"; // iPad IP address (home)
 ~ip = "192.168.1.148"; // iPad IP address (IDMIL - bodysuit1)
 ~port = 5001;
 ~root = "/raspberrypi";
 
-// keyboard
+// ***** keyboard *****
 "Creating keyboard OSCdefs...".postln;
 ~keys = ["/10/0", "/10/1", "/10/2", "/10/3", "/10/4", "/10/5", "/10/6", "/10/7", "/11/0", "/11/1", "/11/2", "/11/3", "/11/4", "/11/5", "/11/6", "/11/7", "/12/0", "/12/1", "/12/2", "/12/3", "/12/4", "/12/5", "/12/6", "/12/7"];
 ~note = Array.fill(24,0);
@@ -20,18 +20,17 @@
 	OSCdef.new(defName, { | msg, time, addr, recvPort |
 		msg.postln;
 		~note[i] = msg[1];
-		// ~note.postln;
 		~noteAction.value(~note[i], i, ~note); // args: this note on/off message, note ID, array of note on/offs
 	}, addr);
 
 });
 
-//accelerometer
+// ***** accelerometer *****
 /*OSCdef.new(\accelerometer, { | msg, time, addr, recvPort |
 	msg.postln;
 }, '/accxyz');*/
 
-//utility controls
+// ***** utility controls *****
 "Creating utility control OSCdefs...".postln;
 ~setUtilityDef = { | num |
 	var defName;
@@ -63,7 +62,7 @@
 	}, addr);
 });
 
-// buttons and knobs
+// ***** buttons and knobs *****
 "Creating buttons and knobs OSCdefs...".postln;
 ~setCtrlDef = { | num |
 	var defName;
@@ -86,12 +85,12 @@
 		defName,
 		{ | msg, time, addr, recvPort |
 			switch (defName)
-			{ "knob1" } { ~in[\knob1] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "knob2" } { ~in[\knob2] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "knob3" } { ~in[\knob3] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "knob4" } { ~in[\knob4] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "button1" } { ~in[\button1] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "button2" } { ~in[\button2] = msg[1]; ~updateDisplay.value(defName, msg[1])}
+			{ "knob1" } { ~knob1.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
+			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
+			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
+			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
+			{ "button1" } { ~button1.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
+			{ "button2" } { ~button2.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
 			{ "button3" } { ~in[\button3] = msg[1]; ~updateDisplay.value(defName, msg[1])}
 			{ "button4" } { ~in[\button4] = msg[1]; ~updateDisplay.value(defName, msg[1]); ~clearGroup.value(msg[1]) };
 	}, addr);
@@ -123,6 +122,7 @@ m = NetAddr(~ip, ~port);
 
 
 // Dictionary for input values
+// Don't need this for now...
 "Creating Dictionary for input values...".postln;
 ~in = Dictionary.new(15);
 ~in.add(\oct_up -> 0.0);
@@ -142,18 +142,15 @@ m = NetAddr(~ip, ~port);
 ~in.add(\button4 -> 0.0);
 
 // page up/down for buttons & knobs
-~mode = 0;
-~modeSwitch = {
-	var maxMode = 7;
-	if (~in[\mode_up] == 1, {
-		"up".postln;
-		if (~mode < maxMode, { ~mode = ~mode + 1 });
+~page_shift = {
+	arg dir, val; // dir = up or down; val = 1 pressed, 0 released (ignore)
+	var min = 0, max = 3;
+	if (val == 1, {
+		~page = switch (dir)
+		{"up"} { if (~page < max, ~page + 1, ~page) }
+		{"down"} { if (~page > min, ~page - 1, ~page) };
+		("Page: " + ~page).postln;
 	});
-	if (~in[\mode_down] == 1, 	{
-		"down".postln;
-		if (~mode > 0, { ~mode = ~mode - 1 });
-	});
-	~mode.postln;
 };
 
 // manage octave shifting
@@ -168,15 +165,69 @@ m = NetAddr(~ip, ~port);
 	});
 };
 
-~page_shift = {
-	arg dir, val; // dir = up or down; val = 1 pressed, 0 released (ignore)
-	var min = 0, max = 3;
-	if (val == 1, {
-		~page = switch (dir)
-		{"up"} { if (~page < max, ~page + 1, ~page) }
-		{"down"} { if (~page > min, ~page - 1, ~page) };
-		("Page: " + ~page).postln;
-	});
+// knob and button mappings
+~knob1 = { arg val;
+	switch(~page)
+	{ 0 } { ~osc1tune.value(val) }
+	{ 1 } { ~lpfCut.value(val) }
+	{ 2 } { ~lpfAtt.value(val) }
+	{ 3 } { ~ampAtt.value(val) };
+};
+
+~knob2 = { arg val;
+	switch(~page)
+	{ 0 } { ~osc2tune.value(val) }
+	{ 1 } { ~lpfRes.value(val) }
+	{ 2 } { ~lpfDec.value(val) }
+	{ 3 } { ~ampDec.value(val) };
+};
+
+~knob3 = { arg val;
+	switch(~page)
+	{ 0 } { ~oscMix.value(val) }
+	{ 1 } { ~lpfEnv.value(val) }
+	{ 2 } { ~lpfSus.value(val) }
+	{ 3 } { ~ampSus.value(val) };
+};
+
+~knob4 = { arg val;
+	switch(~page)
+	{ 0 } { ~oscNoise.value(val) }
+	{ 1 } { ~lpfMix.value(val) }
+	{ 2 } { ~lpfRel.value(val) }
+	{ 3 } { ~ampRel.value(val) };
+};
+
+~button1 = { arg val;
+	switch(~page)
+	{ 0 } { ~osc1sel.value(val) }
+	{ 1 } { "Page 1 Button 1 not assigned".postln; }
+	{ 2 } { "Page 2 Button 1 not assigned".postln; }
+	{ 3 } { "Page 3 Button 1 not assigned".postln; };
+};
+
+~button2 = { arg val;
+	switch(~page)
+	{ 0 } { ~osc2sel.value(val) }
+	{ 1 } { "Page 1 Button 2 not assigned".postln; }
+	{ 2 } { "Page 2 Button 2 not assigned".postln; }
+	{ 3 } { "Page 3 Button 2 not assigned".postln; };
+};
+
+~button3 = { arg val;
+	switch(~page)
+	{ 0 } { "Page 0 Button 3 not assigned".postln; }
+	{ 1 } { "Page 1 Button 3 not assigned".postln; }
+	{ 2 } { "Page 2 Button 3 not assigned".postln; }
+	{ 3 } { "Page 3 Button 3 not assigned".postln; };
+};
+
+~button4 = { arg val;
+	switch(~page)
+	{ 0 } { "Page 0 Button 4 not assigned".postln; }
+	{ 1 } { "Page 1 Button 4 not assigned".postln; }
+	{ 2 } { "Page 2 Button 4 not assigned".postln; }
+	{ 3 } { "Page 3 Button 4 not assigned".postln; };
 };
 
 	
