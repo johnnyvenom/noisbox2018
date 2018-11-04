@@ -1,3 +1,5 @@
+~sendToMaster = Bus.audio(s, 2);
+
 // Here is a SynthDef for a basic 2 oscillator polyphonic subtractive synth.
 // Basic synth modeled after a miniMoog
 "adding synthdefs".postln;
@@ -23,7 +25,8 @@
 ~polyCtl.add(\ampRel -> 0.2);
 
 SynthDef(\poly, {
-	arg freq1 = 440,
+	arg out = ~sendToMaster,
+	freq1 = 440,
 	freq2 = 440,
 	osc1sel = ~polyCtl[\osc1sel],
 	osc2sel = ~polyCtl[\osc2sel],
@@ -31,7 +34,6 @@ SynthDef(\poly, {
 	osc2tune = ~polyCtl[\osc2tune],
 	oscMix = ~polyCtl[\oscMix],
 	oscNoise = ~polyCtl[\oscNoise],
-	level = 0.5,
 	lpfCut = ~polyCtl[\lpfCut],
 	lpfRes = ~polyCtl[\lpfRes],
 	lpfEnv = ~polyCtl[\lpfEnv],
@@ -46,7 +48,7 @@ SynthDef(\poly, {
 	ampRel = ~polyCtl[\ampRel],
 	gate =  1;
 
-	// Sounds sources:
+	// Sound sources:
 	var oscArray = [SinOsc.ar(freq1), Saw.ar(freq1), Pulse.ar(freq1)];
 	var oscArray2 = [SinOsc.ar(freq2), Saw.ar(freq2), Pulse.ar(freq2)];
 	var noise = PinkNoise.ar();
@@ -56,17 +58,28 @@ SynthDef(\poly, {
 	var osc2 = Select.ar(osc2sel, oscArray2);
 	var mix = XFade2.ar(osc1, osc2, oscMix);
 	var ampEnv = EnvGen.kr(Env.adsr(ampAtt, ampDec, ampSus, ampRel), gate, doneAction:2);
-	var noiseMix = XFade2.ar(mix, noise, oscNoise, level * ampEnv);
+	var noiseMix = XFade2.ar(mix, noise, oscNoise, ampEnv);
 
 	// filter section
 	var filterEnv = EnvGen.kr(Env.adsr(lpfAtt, lpfDec, lpfSus, lpfRel, lpfEnv, bias: 1 - lpfEnv));
 	var filterMix = MoogFF.ar(noiseMix, lpfCut * filterEnv, lpfRes);
 	var outSig = XFade2.ar(noiseMix*0.5, filterMix, lpfMix); // mix pre and post filter signals
 
-	outSig = Limiter.ar(outSig!2, 0.5, 0.01);
-	Out.ar(0,outSig);
+	// outSig = Limiter.ar(outSig!2, 0.5, 0.01); // now this is on master channel
+	// Out.ar(0,outSig!2);
+	Out.ar(~sendToMaster,outSig!2);
 }).add;
 
+// ***** Here is the Master Output SynthDef *****
+SynthDef(\master, {
+	arg masterVol = ~glob[\volume], out = 0;
+	var sig = In.ar(~sendToMaster, 2) * masterVol;
+	// sig = Limiter.ar(sig, 1, 0.01);
+	Out.ar(out, sig);
+}).add;
+
+// ~master = Synth.new(\master, [\masterVol, ~glob[\volume]], ~synthGroup);
+/*~master = Synth.new(\master, [\masterVol, ~glob[\volume]], ~masterGroup);*/
 
 // ***** polySynth controls *****
 ~osc1sel = { // osc 1 choose between sine, saw or pulse waveforms

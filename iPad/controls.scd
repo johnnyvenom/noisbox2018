@@ -2,20 +2,14 @@
 // OSC defs - inputs
 // **************************************
 
-
-// ~ip = "192.168.1.8"; // iPad IP address (home)
-~ip = "192.168.1.148"; // iPad IP address (IDMIL - bodysuit1)
-~port = 5001;
-~root = "/raspberrypi";
-
 // ***** keyboard *****
 "Creating keyboard OSCdefs...".postln;
-~keys = ["/10/0", "/10/1", "/10/2", "/10/3", "/10/4", "/10/5", "/10/6", "/10/7", "/11/0", "/11/1", "/11/2", "/11/3", "/11/4", "/11/5", "/11/6", "/11/7", "/12/0", "/12/1", "/12/2", "/12/3", "/12/4", "/12/5", "/12/6", "/12/7"];
+~oscAddrs = ["/10/0", "/10/1", "/10/2", "/10/3", "/10/4", "/10/5", "/10/6", "/10/7", "/11/0", "/11/1", "/11/2", "/11/3", "/11/4", "/11/5", "/11/6", "/11/7", "/12/0", "/12/1", "/12/2", "/12/3", "/12/4", "/12/5", "/12/6", "/12/7"];
 ~note = Array.fill(24,0);
 
 24.do({
 	arg i;
-	var addr = (~root++~keys[i]);
+	var addr = (~root++~oscAddrs[i]);
 	var defName = ("note"++i);
 	OSCdef.new(defName, { | msg, time, addr, recvPort |
 		msg.postln;
@@ -37,8 +31,8 @@
 	switch (num)
 	{0} {defName = "oct_up"}
 	{1} {defName = "oct_down"}
-	{2} {defName = "mode_down"}
-	{3} {defName = "mode_up"}
+	{2} {defName = "page_down"}
+	{3} {defName = "page_up"}
 	{4} {defName = "volume"}
 	{5} {defName = "piezo_left"}
 	{6} {defName = "piezo_right"};
@@ -54,9 +48,9 @@
 			switch (defName)
 			{ "oct_down"} { ~oct_shift.value("down", msg[1]) }
 			{ "oct_up"} { ~oct_shift.value("up", msg[1]) }
-			{"mode_down"} { ~page_shift.value("down", msg[1]) }
-			{"mode_up"} { ~page_shift.value("up", msg[1]) }
-			{"volume"} { ~in[\volume] = msg[1] }
+			{"page_down"} { ~page_shift.value("down", msg[1]) }
+			{"page_up"} { ~page_shift.value("up", msg[1]) }
+			{"volume"} { ~vol_adjust.value(msg[1]) }
 			{"piezo_left"} { ~in[\piezo_left] = msg[1] } // tbd...
 			{"piezo_right"} { ~in[\piezo_right] = msg[1] }; // tbd...
 	}, addr);
@@ -85,14 +79,14 @@
 		defName,
 		{ | msg, time, addr, recvPort |
 			switch (defName)
-			{ "knob1" } { ~knob1.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "button1" } { ~button1.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "button2" } { ~button2.value(msg[1]); ~updateDisplay.value(defName, msg[1])}
-			{ "button3" } { ~in[\button3] = msg[1]; ~updateDisplay.value(defName, msg[1])}
-			{ "button4" } { ~in[\button4] = msg[1]; ~updateDisplay.value(defName, msg[1]); ~clearGroup.value(msg[1]) };
+			{ "knob1" } { ~knob1.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "button1" } { ~button1.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "button2" } { ~button2.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "button3" } { ~button3.value(msg[1]); ~updateDisplay.value(defName, msg[1]) }
+			{ "button4" } { ~button4.value(msg[1]); ~updateDisplay.value(defName, msg[1]) };
 	}, addr);
 });
 
@@ -121,35 +115,24 @@ m = NetAddr(~ip, ~port);
 // *********************************
 
 
-// Dictionary for input values
+// Dictionary for control values
 // Don't need this for now...
 "Creating Dictionary for input values...".postln;
-~in = Dictionary.new(15);
-~in.add(\oct_up -> 0.0);
-~in.add(\oct_down -> 0.0);
-~in.add(\mode_down -> 0.0);
-~in.add(\mode_up -> 0.0);
-~in.add(\volume -> 0.0);
-~in.add(\piezo_left -> 0.0);
-~in.add(\piezo_right -> 0.0);
-~in.add(\knob1 -> 0.0);
-~in.add(\knob2 -> 0.0);
-~in.add(\knob3 -> 0.0);
-~in.add(\knob4 -> 0.0);
-~in.add(\button1 -> 0.0);
-~in.add(\button2 -> 0.0);
-~in.add(\button3 -> 0.0);
-~in.add(\button4 -> 0.0);
+~glob.add(\octave -> 2); //default octave for the synthesizer; range is -2 to 8.
+~glob.add(\page -> 0); //page up/down through sets of controls.
+~glob.add(\volume -> 0.5); // master vol
+~glob.add(\piezo_left -> 0.0);
+~glob.add(\piezo_right -> 0.0);
 
 // page up/down for buttons & knobs
 ~page_shift = {
 	arg dir, val; // dir = up or down; val = 1 pressed, 0 released (ignore)
 	var min = 0, max = 3;
 	if (val == 1, {
-		~page = switch (dir)
-		{"up"} { if (~page < max, ~page + 1, ~page) }
-		{"down"} { if (~page > min, ~page - 1, ~page) };
-		("Page: " + ~page).postln;
+		~glob[\page] = switch (dir)
+		{"up"} { if (~glob[\page] < max, ~glob[\page] + 1, ~glob[\page]) }
+		{"down"} { if (~glob[\page] > min, ~glob[\page] - 1, ~glob[\page]) };
+		("Page: " + ~glob[\page]).postln;
 	});
 };
 
@@ -158,16 +141,23 @@ m = NetAddr(~ip, ~port);
 	arg dir, val; // dir = up or down; val = 1 pressed, 0 released (ignore)
 	var min = -2, max = 8;
 	if (val == 1, {
-		~octave = switch (dir)
-		{"up"} { if (~octave < max, ~octave + 1, ~octave) }
-		{"down"} { if (~octave > min, ~octave - 1, ~octave) };
-		("Octave: " + ~octave).postln;
+		~glob[\octave] = switch (dir)
+		{"up"} { if (~glob[\octave] < max, ~glob[\octave] + 1, ~glob[\octave]) }
+		{"down"} { if (~glob[\octave] > min, ~glob[\octave] - 1, ~glob[\octave]) };
+		("Octave: " + ~glob[\octave]).postln;
 	});
+};
+
+~vol_adjust = {
+	arg val;
+	~glob[\volume] = val.linexp(0, 1, 0.001, 1);
+	~master.set(\masterVol, ~glob[\volume]);
+	~glob[\volume].postln;
 };
 
 // knob and button mappings
 ~knob1 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~osc1tune.value(val) }
 	{ 1 } { ~lpfCut.value(val) }
 	{ 2 } { ~lpfAtt.value(val) }
@@ -175,7 +165,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~knob2 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~osc2tune.value(val) }
 	{ 1 } { ~lpfRes.value(val) }
 	{ 2 } { ~lpfDec.value(val) }
@@ -183,7 +173,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~knob3 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~oscMix.value(val) }
 	{ 1 } { ~lpfEnv.value(val) }
 	{ 2 } { ~lpfSus.value(val) }
@@ -191,7 +181,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~knob4 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~oscNoise.value(val) }
 	{ 1 } { ~lpfMix.value(val) }
 	{ 2 } { ~lpfRel.value(val) }
@@ -199,7 +189,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~button1 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~osc1sel.value(val) }
 	{ 1 } { "Page 1 Button 1 not assigned".postln; }
 	{ 2 } { "Page 2 Button 1 not assigned".postln; }
@@ -207,7 +197,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~button2 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { ~osc2sel.value(val) }
 	{ 1 } { "Page 1 Button 2 not assigned".postln; }
 	{ 2 } { "Page 2 Button 2 not assigned".postln; }
@@ -215,7 +205,7 @@ m = NetAddr(~ip, ~port);
 };
 
 ~button3 = { arg val;
-	switch(~page)
+	switch(~glob[\page])
 	{ 0 } { "Page 0 Button 3 not assigned".postln; }
 	{ 1 } { "Page 1 Button 3 not assigned".postln; }
 	{ 2 } { "Page 2 Button 3 not assigned".postln; }
@@ -223,11 +213,11 @@ m = NetAddr(~ip, ~port);
 };
 
 ~button4 = { arg val;
-	switch(~page)
-	{ 0 } { "Page 0 Button 4 not assigned".postln; }
-	{ 1 } { "Page 1 Button 4 not assigned".postln; }
-	{ 2 } { "Page 2 Button 4 not assigned".postln; }
-	{ 3 } { "Page 3 Button 4 not assigned".postln; };
+	switch(~glob[\page])
+	{ 0 } { ~clearGroup.value(val); "freeing stuck notes".postln; }
+	{ 1 } { ~clearGroup.value(val); "freeing stuck notes".postln; }
+	{ 2 } { ~clearGroup.value(val); "freeing stuck notes".postln; }
+	{ 3 } { ~clearGroup.value(val); "freeing stuck notes".postln; }
 };
 
 	
