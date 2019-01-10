@@ -1,5 +1,29 @@
 // variable length looper for Noisebox
 
+// init params for display
+fork({
+	var params = [
+		// stuff
+		[\loopRate, "Rate", \knob, 1, 1.linlin(-4,6,0,1)],
+		[\loopSrcMix, "Source", \knob, 0.5, 0.5],
+		[\loopRecDub, "Rec/Dub", \button, 0, " "],
+		[\loopPlayStop, "Ply/Stp", \button, 0, " "],
+		[\loopClearBuf, "Clear", \button, 0, " "],
+		[\loopMuteExt, "MuteExt", \button, 0, " "]
+	];
+
+	~d.looper = ();
+
+	params.size.do({
+		| i |
+		~d[\looper][params[i][0]] = ();
+		~d[\looper][params[i][0]].put(\label, params[i][1]); // set label
+		~d[\looper][params[i][0]].put(\type, params[i][2]); // set type
+		~d[\looper][params[i][0]].put(\outVal, params[i][3]); // set initial output value
+		~d[\looper][params[i][0]].put(\normVal, params[i][4]); // set initial normalized value
+	});
+});
+
 // initialization (run once when patch is first started)
 ~loop = ();
 ~loop.state = 0;
@@ -111,7 +135,9 @@ Looper states:
 					\t_trig, 0,
 					\timerGate, 0,
 					\max, ~loop.maxLength,
-					\which, 0],
+					\which, 0
+					// \rate, ~d.looper.loopRate.outVal
+				],
 				~grp.loop_phasor).register; // start phasor synth
 				s.sync;
 				~phasor.set(\timerGate, 1, \t_trig, 1); // begin recording
@@ -256,17 +282,20 @@ Looper states:
 };
 
 ~loopRate = { // playback speed control
-	arg inVal;
-	var speed;
-	speed = inVal.linlin(0, 1, ~loop.rateMinMax[0],  ~loop.rateMinMax[1]);
+	arg val;
+	var inst = \looper, ctl = \loopRate, normVal = val;
+	var outVal = val.linlin(0, 1, ~loop.rateMinMax[0],  ~loop.rateMinMax[1]);
 	if (~phasor.isPlaying, {
-		speed.postln;
-		~phasor.set(\rate, speed);
+		outVal.postln;
+		~phasor.set(\rate, outVal);
+		~storeCtlVals.value(inst, ctl, outVal, normVal);
 	});
 };
 
 ~loopSrcMix = { // input source mix (0 = external; 1: synth)
-	arg inVal;
-	var inMix;
-	~in.set(\srcMix, inVal);
+	arg val;
+	var inst = \looper, ctl = \loopSrcMix, normVal = val;
+	var outVal = normVal;
+	~in.set(\srcMix, outVal);
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };

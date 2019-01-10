@@ -1,5 +1,44 @@
 // Here is a SynthDef for a basic 2 oscillator polyphonic subtractive synth.
 
+//init params for polySynth.
+
+fork({
+	var params = [
+		[\osc1sel,"OSC1sel",\button, 0, \SIN],
+		[\osc2sel,"OSC2sel",\button, 1, \SAW],
+		[\osc1tune,"Osc1tune",\knob, 0, 0.5],
+		[\osc2tune,"Osc2tune",\knob, 0, 0.5],
+		[\oscMix,"OscMix",\knob, 0, 0.5],
+		[\oscNoise,"OscNoise",\knob, -1, 0],
+		[\lpfCut,"LPF cut",\knob, 500, 500.explin(15, 12000, 0.001, 1)],
+		[\lpfRes,"LPF res",\knob, 3.3, 3.3.linlin(0,4,0,1)],
+		[\lpfEnv,"LPF Env",\knob, 1, 1],
+		[\lpfMix,"LPF Mix",\knob, 1, 1],
+		[\lpfAtt,"LPF Att",\knob, 0.1, 0.1.linlin(0,~envSegMax,0,1)],
+		[\lpfDec,"LPF Dec",\knob, 0.1, 0.1.linlin(0,~envSegMax,0,1)],
+		[\lpfSus,"LPF Sus",\knob, 0.9, 0.9.linlin(0,~envSegMax,0,1)],
+		[\lpfRel,"LPF Rel",\knob, 0.2, 0.2.linlin(0,~envSegMax,0,1)],
+		[\ampAtt,"Amp Att",\knob, 0.1, 0.1.linlin(0,~envSegMax,0,1)],
+		[\ampDec,"Amp Dec",\knob, 0.1, 0.1.linlin(0,~envSegMax,0,1)],
+		[\ampSus,"Amp Sus",\knob, 0.7, 0.7.linlin(0,~envSegMax,0,1)],
+		[\ampRel,"Amp Rel",\knob, 0.2, 0.2.linlin(0,~envSegMax,0,1)]
+	];
+
+	~d.pSynth = ();
+	~envSegMax = 5; // Max length of envelope segments (seconds)
+
+	params.size.do({
+		| i |
+		~d[\pSynth][params[i][0]] = ();
+/*		~d[\pSynth][params[i][0]].put(\inst, \pSynth); // set \inst
+		~d[\pSynth][params[i][0]].put(\ctl, params[i][0]); // set \ctl*/
+		~d[\pSynth][params[i][0]].put(\label, params[i][1]); // set label
+		~d[\pSynth][params[i][0]].put(\type, params[i][2]); // set label
+		~d[\pSynth][params[i][0]].put(\outVal, params[i][3]); // set initial output value
+		~d[\pSynth][params[i][0]].put(\normVal, params[i][4]); // set initial normalized value
+	});
+});
+
 ~polyCtl = Dictionary.new(18);
 ~polyCtl.add(\osc1sel -> 0);
 ~polyCtl.add(\osc2sel -> 1);
@@ -24,24 +63,24 @@ SynthDef(\poly, {
 	arg out,
 	freq1 = 440,
 	freq2 = 440,
-	osc1sel = ~polyCtl[\osc1sel],
-	osc2sel = ~polyCtl[\osc2sel],
-	osc1tune = ~polyCtl[\osc1tune],
-	osc2tune = ~polyCtl[\osc2tune],
-	oscMix = ~polyCtl[\oscMix],
-	oscNoise = ~polyCtl[\oscNoise],
-	lpfCut = ~polyCtl[\lpfCut],
-	lpfRes = ~polyCtl[\lpfRes],
-	lpfEnv = ~polyCtl[\lpfEnv],
-	lpfMix = ~polyCtl[\lpfMix],
-	lpfAtt = ~polyCtl[\lpfAtt],
-	lpfDec = ~polyCtl[\lpfDec],
-	lpfSus = ~polyCtl[\lpfSus],
-	lpfRel = ~polyCtl[\lpfRel],
-	ampAtt = ~polyCtl[\ampAtt],
-	ampDec = ~polyCtl[\ampDec],
-	ampSus = ~polyCtl[\ampSus],
-	ampRel = ~polyCtl[\ampRel],
+	osc1sel = ~d.pSynth.osc1sel.outVal,
+	osc2sel = ~d.pSynth.osc2sel.outVal,
+	osc1tune = ~d.pSynth.osc1tune.outVal,
+	osc2tune = ~d.pSynth.osc2tune.outVal,
+	oscMix = ~d.pSynth.oscMix.outVal,
+	oscNoise = ~d.pSynth.oscNoise.outVal,
+	lpfCut = ~d.pSynth.lpfCut.outVal,
+	lpfRes = ~d.pSynth.lpfRes.outVal,
+	lpfEnv = ~d.pSynth.lpfEnv.outVal,
+	lpfMix = ~d.pSynth.lpfMix.outVal,
+	lpfAtt = ~d.pSynth.lpfAtt.outVal,
+	lpfDec = ~d.pSynth.lpfDec.outVal,
+	lpfSus = ~d.pSynth.lpfSus.outVal,
+	lpfRel = ~d.pSynth.lpfRel.outVal,
+	ampAtt = ~d.pSynth.ampAtt.outVal,
+	ampDec = ~d.pSynth.ampDec.outVal,
+	ampSus = ~d.pSynth.ampSus.outVal,
+	ampRel = ~d.pSynth.ampRel.outVal,
 	gate =  1;
 
 	// Sound sources:
@@ -59,7 +98,7 @@ SynthDef(\poly, {
 	// filter section
 	var filterEnv = EnvGen.kr(Env.adsr(lpfAtt, lpfDec, lpfSus, lpfRel, lpfEnv, bias: 1 - lpfEnv));
 	var filterMix = MoogFF.ar(noiseMix, lpfCut * filterEnv, lpfRes);
-	var outSig = XFade2.ar(noiseMix*0.5, filterMix, lpfMix); // mix pre and post filter signals
+	var outSig = XFade2.ar(noiseMix*0.5, filterMix, lpfMix*2-1); // mix pre and post filter signals
 
 	Out.ar(out,outSig!2);
 }).add;
@@ -67,125 +106,192 @@ SynthDef(\poly, {
 // ***** polySynth controls *****
 ~osc1sel = { // osc 1 choose between sine, saw or pulse waveforms
 	arg val;
-	~polyCtl[\osc1sel] = (~polyCtl[\osc1sel] + 1) % 3;
-	~polyCtl[\osc1sel].postln;
-	~grp.psynth.set(\osc1sel, ~polyCtl[\osc1sel]);
+	var inst = \pSynth, ctl = \osc1sel, normVal;
+	var wave = [\SIN, \SAW, \SQR];
+	var outVal = ~d.pSynth.osc1sel.outVal+1%3;
+	~grp.psynth.set(\osc1sel, outVal);
+
+	~polyCtl[\osc1sel] = outVal;
+	normVal = wave[outVal];
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~osc2sel = { // osc 2 choose between sine, saw or pulse waveforms
 	arg val;
-	~polyCtl[\osc2sel] = (~polyCtl[\osc2sel] + 1) % 3;
-	~polyCtl[\osc2sel].postln;
-	~grp.psynth.set(\osc2sel, ~polyCtl[\osc2sel]);
+	var inst = \pSynth, ctl = \osc2sel, normVal;
+	var wave = [\SIN, \SAW, \SQR];
+	var outVal = ~d.pSynth.osc2sel.outVal+1%3;
+	~grp.psynth.set(\osc2sel, outVal);
+
+	~polyCtl[\osc2sel] = outVal;
+	normVal = wave[outVal];
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~osc1tune = { // osc 1 tuning +/- (semitones)
 	arg val;
-	g = ControlSpec(~tuneMin * -1, ~tuneMax);
-	~polyCtl[\osc1tune] = g.map(val);
+	var inst = \pSynth, ctl = \osc1tune, normVal = val;
+	var outVal = val.linlin(0, 1, ~tuneMin * -1, ~tuneMax);
 	128.do({
 		arg i;
-		i+~polyCtl[\osc1tune];
-		~keys[i].set(\freq1, (i+~polyCtl[\osc1tune]).midicps);
+		i+outVal;
+		~keys[i].set(\freq1, (i+outVal).midicps);
 	});
+
+	~polyCtl[\osc1tune] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~osc2tune = { // osc 2 tuning +/- (semitones)
 	arg val;
-	g = ControlSpec(~tuneMin * -1, ~tuneMax);
-	~polyCtl[\osc2tune] = g.map(val);
+	var inst = \pSynth, ctl = \osc2tune, normVal = val;
+	var outVal = val.linlin(0, 1, ~tuneMin * -1, ~tuneMax);
 	128.do({
 		arg i;
-		i+~polyCtl[\osc2tune];
-		~keys[i].set(\freq2, (i+~polyCtl[\osc2tune]).midicps);
+		i+outVal;
+		~keys[i].set(\freq2, (i+outVal).midicps);
 	});
+
+	~polyCtl[\osc2tune] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~oscMix = { // mix osc 1 <-> osc 2
 	arg val;
-	~polyCtl[\oscMix] = (val*2)-1;
-	~grp.psynth.set(\oscMix, ~polyCtl[\oscMix]);
+	var inst = \pSynth, ctl = \oscMix, normVal = val;
+	var outVal = (val*2)-1;
+	~grp.psynth.set(\oscMix, outVal);
+
+	~polyCtl[\oscMix] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~oscNoise = { // mix osc1/2 <-> noise
 	arg val;
-	~polyCtl[\oscNoise] = (val*2)-1;
-	~grp.psynth.set(\oscNoise, ~polyCtl[\oscNoise]);
+	var inst = \pSynth, ctl = \oscNoise, normVal = val;
+	var outVal = (val*2)-1;
+	~grp.psynth.set(\oscNoise, outVal);
+
+	~polyCtl[\oscNoise] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfCut = { // Filter cutoff frequency (Hz)
 	arg val;
-	g = ControlSpec(15, 12000, \exp);
-	~polyCtl[\lpfCut] = g.map(val);
-	// ~polyCtl[\lpfCut].postln;
-	~grp.psynth.set(\lpfCut, ~polyCtl[\lpfCut]);
+	var inst = \pSynth, ctl = \lpfCut, normVal = val;
+	var outVal = val.linexp(0, 1, 15, 12000);
+	~grp.psynth.set(\lpfCut, outVal);
+
+	~polyCtl[\lpfCut] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfRes = { // Filter resonance (gain, 0 - 4)
 	arg val;
-	g = ControlSpec(0, 4, \lin);
-	~polyCtl[\lpfRes] = g.map(val);
-	~polyCtl[\lpfRes].postln;
-	~grp.psynth.set(\lpfRes, ~polyCtl[\lpfRes]);
+	var inst = \pSynth, ctl = \lpfRes, normVal = val;
+	var outVal = val.linlin(0, 1, 0, 4);
+	~grp.psynth.set(\lpfRes, outVal);
+
+	~polyCtl[\lpfRes] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfEnv = { // Filter envelope amount ( 0 - 1)
 	arg val;
-	~polyCtl[\lpfEnv] = val;
-	~polyCtl[\lpfEnv].postln;
-	~grp.psynth.set(\lpfEnv, ~polyCtl[\lpfEnv]);
+	var inst = \pSynth, ctl = \lpfEnv, normVal = val;
+	var outVal = val;
+	~grp.psynth.set(\lpfEnv, outVal);
+
+	~polyCtl[\lpfEnv] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfMix = { // Mix pre <-> post filter
 	arg val;
-	~polyCtl[\lpfMix] = (val*2)-1;
-	~grp.psynth.set(\lpfMix, ~polyCtl[\lpfMix]);
+	var inst = \pSynth, ctl = \lpfMix, normVal = val;
+	var outVal = val;
+	~grp.psynth.set(\lpfMix, outVal);
+
+	~polyCtl[\lpfMix] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfAtt = { // Filter ADSR - Attack (sec)
 	arg val;
-	~polyCtl[\lpfAtt] = val * ~envSegMax;
-	~grp.psynth.set(\lpfAtt, ~polyCtl[\lpfAtt]);
+	var inst = \pSynth, ctl = \lpfAtt, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\lpfAtt, outVal);
+
+	~polyCtl[\lpfAtt] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfDec = { // Filter ADSR - Decay (sec)
 	arg val;
-	~polyCtl[\lpfDec] = val * ~envSegMax;
-	~grp.psynth.set(\lpfDec, ~polyCtl[\lpfDec]);
+	var inst = \pSynth, ctl = \lpfDec, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\lpfDec, outVal);
+
+	~polyCtl[\lpfDec] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfSus = { // Filter ADSR - Sustain (level)
 	arg val;
-	~polyCtl[\lpfSus] = val;
-	~grp.psynth.set(\lpfSus, ~polyCtl[\lpfSus]);
+	var inst = \pSynth, ctl = \lpfSus, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\lpfSus, outVal);
+
+	~polyCtl[\lpfSus] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
 ~lpfRel = { // Filter ADSR - Release (sec)
 	arg val;
-	~polyCtl[\lpfRel] = val * ~envSegMax;
-	~grp.psynth.set(\lpfRel, ~polyCtl[\lpfRel]);
+	var inst = \pSynth, ctl = \lpfRel, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\lpfRel, outVal);
+
+	~polyCtl[\lpfRel] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
-~ampAtt = { // Amplitude ADSR - Attack (sec)
+~ampAtt = { // Amp ADSR - Attack (sec)
 	arg val;
-	~polyCtl[\ampAtt] = val * ~envSegMax;
-	~grp.psynth.set(\ampAtt, ~polyCtl[\ampAtt]);
+	var inst = \pSynth, ctl = \ampAtt, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\ampAtt, outVal);
+
+	~polyCtl[\ampAtt] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
-~ampDec = { // Amplitude ADSR - Decay (sec)
+~ampDec = { // Amp ADSR - Decay (sec)
 	arg val;
-	~polyCtl[\ampDec] = val * ~envSegMax;
-	~grp.psynth.set(\ampDec, ~polyCtl[\ampDec]);
+	var inst = \pSynth, ctl = \ampDec, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\ampDec, outVal);
+
+	~polyCtl[\ampDec] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
-~ampSus = { // Amplitude ADSR - Sustain (level)
+~ampSus = { // Amp ADSR - Sustain (level)
 	arg val;
-	~polyCtl[\ampSus] = val;
-	~grp.psynth.set(\ampSus, ~polyCtl[\ampSus]);
+	var inst = \pSynth, ctl = \ampSus, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\ampSus, outVal);
+
+	~polyCtl[\ampSus] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };
 
-~ampRel = { // Amplitude ADSR - Release (sec)
+~ampRel = { // Amp ADSR - Release (sec)
 	arg val;
-	~polyCtl[\ampRel] = val * ~envSegMax;
-	~grp.psynth.set(\ampRel, ~polyCtl[\ampRel]);
+	var inst = \pSynth, ctl = \ampRel, normVal = val;
+	var outVal = val * ~envSegMax;
+	~grp.psynth.set(\ampRel, outVal);
+
+	~polyCtl[\ampRel] = outVal;
+	~storeCtlVals.value(inst, ctl, outVal, normVal);
 };

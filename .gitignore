@@ -1,3 +1,4 @@
 *.DS_store
-Python/luma.examples
+development/Python/luma.examples
 .DS_Store
+imgs_and_libs

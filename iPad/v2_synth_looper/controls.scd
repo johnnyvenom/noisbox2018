@@ -108,14 +108,14 @@ A-A#-B-C-C#-D-D#-E-F-F#-G-G#-A-A#-B-C-C#-D=D#-E
 		defName,
 		{ | msg, time, addr, recvPort |
 			switch (defName)
-			{ "knob1" } { ~knob1.value(msg[1]); ~updateDisplay.value("knob", 1, msg[1], "param1", msg[1]) }
-			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value("knob", 2, msg[1], "param2", msg[1]) }
-			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value("knob", 3, msg[1], "param3", msg[1]) }
-			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value("knob", 4, msg[1], "param4", msg[1]) }
-			{ "button1" } { ~button1.value(msg[1]); ~updateDisplay.value("button", 1, msg[1], "param1") }
-			{ "button2" } { ~button2.value(msg[1]); ~updateDisplay.value("button", 2, msg[1], "param2") }
-			{ "button3" } { ~button3.value(msg[1]); ~updateDisplay.value("button", 3, msg[1], "param3") }
-			{ "button4" } { ~button4.value(msg[1]); ~updateDisplay.value("button", 4, msg[1], "param4") };
+			{ "knob1" } { ~knob1.value(msg[1]); ~updateDisplay.value(1, msg[1]) }
+			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value(2, msg[1]) }
+			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value(3, msg[1]) }
+			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value(4, msg[1]) }
+			{ "button1" } { ~button1.value(msg[1]); ~updateDisplay.value(5, msg[1]) }
+			{ "button2" } { ~button2.value(msg[1]); ~updateDisplay.value(6, msg[1]) }
+			{ "button3" } { ~button3.value(msg[1]); ~updateDisplay.value(7, msg[1]) }
+			{ "button4" } { ~button4.value(msg[1]); ~updateDisplay.value(8, msg[1]) };
 	}, addr);
 });
 
@@ -131,19 +131,72 @@ A-A#-B-C-C#-D-D#-E-F-F#-G-G#-A-A#-B-C-C#-D=D#-E
 m = NetAddr(~ip, ~port);
 // MODE status
 
+~d = (); // hold all display values.
+
+~storeCtlVals = {
+	arg inst, ctl, outVal, normVal;
+	~d[inst][ctl].put(\outVal, outVal);
+	~d[inst][ctl].put(\normVal, normVal);
+};
+
+// array that holds all mappings [0 - n] for each page
+// nested arrays [0] = instrument, [1 - 4] = knobs, [5 -8] = buttons
+~dMap = Array.newClear(5);
+~dMap[0] = [\pSynth, // instrument
+	\osc1tune, \osc2tune, \oscMix, \oscNoise, // knobs
+	\osc1sel, \osc2sel, nil, nil // buttons
+];
+
+~dMap[1] = [\pSynth, // instrument
+	\lpfCut, \lpfRes, \lpfEnv, \lpfMix, // knobs
+	nil, nil, nil, nil // buttons
+];
+
+~dMap[2] = [\pSynth, // instrument
+	\lpfAtt, \lpfDec, \lpfSus, \lpfRel, // knobs
+	nil, nil, nil, nil // buttons
+];
+
+~dMap[3] = [\pSynth, // instrument
+	\ampAtt, \ampDec, \ampSus, \ampRel, // knobs
+	nil, nil, nil, nil // buttons
+];
+
+~dMap[4] = [\looper, // instrument
+	\loopRate, nil, nil, \loopSrcMix, // knobs
+	\loopRecDub, \loopPlayStop, \loopClearBuf, \loopMuteExt // buttons
+];
+
+
 // knob and button updates
 ~updateDisplay = {
-	// call with the following arguments: [0] button/knob, [1] index 1-4, [2] actual value, [3] label, [4] normalized value (0-1) for knob only
-	arg ctrl, index, val, label, knob = 0;
-	var addr;
-	addr = "/display/"++ctrl++index++"/";
-	m.sendMsg(addr++"label", label);
-	switch (ctrl)
-	{ "knob" } {
-		m.sendMsg(addr++"knob", knob);
-		m.sendMsg(addr++"val", val);
-	}
-	{ "button" } { 	m.sendMsg(addr++"button", val) 	};
+	// call with the following arguments: [1] index (knobs 1-4, buttons 5-8), [2] actual value, [3] label, [4] normalized value (0-1) for knob only
+	arg index, val;
+	var page, inst, ctl, type, label, outVal, normVal, addr;
+	page = ~glob[\page];
+	inst = ~dMap[page][0];
+	ctl = ~dMap[page][index]; //**** <----- need to update the args when it is called!!!!!
+	type = if (index < 5, {"knob"}, {"button"});
+
+	addr = "/display/"++type++(index-1%4+1)++"/";
+
+	m.sendMsg(addr++"label", ~d[inst][ctl].label);
+
+	switch(type,
+		"knob", {
+			// do knob things
+			m.sendMsg(addr++"val", ~d[inst][ctl].outVal.round(0.001));
+			m.sendMsg(addr++type, ~d[inst][ctl].normVal);
+		},
+		"button", {
+			// do button things
+			if (val == 1, {
+				m.sendMsg(addr++type, ~d[inst][ctl].normVal);
+			});
+		}
+	);
+
+	[page, inst, ctl, type, addr].postln;
 };
 
 ~updateDisplayTitle = {
@@ -182,7 +235,31 @@ m = NetAddr(~ip, ~port);
 		{"up"} { if (~glob[\page] < max, ~glob[\page] + 1, ~glob[\page]) }
 		{"down"} { if (~glob[\page] > min, ~glob[\page] - 1, ~glob[\page]) };
 		("Page: " + ~glob[\page]).postln;
+
 		~updateDisplayTitle.value(~glob[\pageName][~glob[\page]]);
+
+		8.do({
+			| index |
+			var type, addr, inst, ctl;
+			type = if (index < 4, {"knob"}, {"button"});
+			addr = "/display/"++type++(index%4+1)++"/";
+			// index.postln;
+			if (~dMap[~glob[\page]][index+1] != nil,
+				{
+					inst = ~dMap[~glob[\page]][0];
+					ctl = ~dMap[~glob[\page]][index+1];
+					[index, addr, inst, ctl, ~d[inst][ctl].label].postln;
+					m.sendMsg(addr++"label", ~d[inst][ctl].label);
+					m.sendMsg(addr++"val", ~d[inst][ctl].outVal);
+					m.sendMsg(addr++type, ~d[inst][ctl].normVal);
+				},
+				{
+					m.sendMsg(addr++"label", "---");
+					m.sendMsg(addr++type, " ");
+				}
+			);
+			// m.sendMsg(addr++"label", ~d[inst][ctl].label);
+		});
 	});
 };
 

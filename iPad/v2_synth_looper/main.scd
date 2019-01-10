@@ -9,7 +9,7 @@ fork{
 	0.2.wait;
 	"".postln;
 
-	~ip = "192.168.1.7"; // iPad IP address (home)
+	~ip = "192.168.1.9"; // iPad IP address (home)
 	//  ~ip = "192.168.1.148"; // iPad IP address (IDMIL - bodysuit1)
 	~port = 5001;
 	~root = "/raspberrypi";
@@ -18,7 +18,7 @@ fork{
 	// GLOBAL vars:
 	// *********************************
 	~glob = Dictionary.new(5); // Dict to hold global control vars (see assignments in controls.scd)
-	~octave = 2; //default octave for the synthesizer; range is -2 to 8.
+	~octave = 2; //default octave for the synthesizer; range is -2 to 8.`
 	~numKeys = 24; // number of keys on the keyboard
 	~tuneMax = 24; // Oscillator tune up range (semitones)
 	~tuneMin = 24; // Oscillator tune down range (semitones)
@@ -49,6 +49,7 @@ fork{
 	"controls.scd".loadRelative; // contains OSCdefs and input functions.
 	5.do({ 0.1.wait; ". ".post;}); 0.2.wait; "".postln;
 	~updateDisplayTitle.value(~glob[\pageName][~glob[\page]]);
+	s.sync;
 	"Loading polySynth engine ".post;
 	"polySynth.scd".loadRelative; // contains the SynthDefs
 	5.do({ 0.1.wait; ". ".post;}); 0.2.wait; "".postln;
