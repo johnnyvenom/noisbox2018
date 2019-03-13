@@ -1,0 +1,2646 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"~sen",
+				"~send_to_display"
+			],
+			[
+				"if",
+				"if\tif"
+			],
+			[
+				"~ne",
+				"~newKnobVals"
+			],
+			[
+				"OSCARG_",
+				"OSCARG_DATAUNPACK"
+			],
+			[
+				"def",
+				"defName"
+			],
+			[
+				"f",
+				"f"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"an",
+				"angles4m"
+			],
+			[
+				"angle",
+				"angles3m"
+			],
+			[
+				"angles",
+				"angles1m"
+			],
+			[
+				"ran",
+				"random_dist_perm"
+			],
+			[
+				"set",
+				"setup\tArduino setup"
+			],
+			[
+				"P",
+				"PMCrotale"
+			],
+			[
+				"print",
+				"print_a_line"
+			],
+			[
+				"amoun",
+				"amount_of_crackers"
+			],
+			[
+				"cars_",
+				"cars_not_driven"
+			],
+			[
+				"ca",
+				"cars_driven"
+			],
+			[
+				"be",
+				"belt-1"
+			],
+			[
+				"b",
+				"belt-4"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"dela",
+				"delayIndicator"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"tit",
+				"title\tAttr"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"digital",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"take",
+				"takePicture"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"motion",
+				"Motion"
+			],
+			[
+				"motionSe",
+				"motionCountThresh"
+			],
+			[
+				"animate",
+				"animateFlash"
+			],
+			[
+				"led",
+				"ledBlue"
+			],
+			[
+				"anal",
+				"analogWrite\tArduino analogWrite"
+			],
+			[
+				"println",
+				"println\tprintln text"
+			],
+			[
+				"key",
+				"key\tkeyReleased"
+			],
+			[
+				"bac",
+				"background\tbackground rgb"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"get_template_directory",
+				"get_template_directory_uri"
+			],
+			[
+				"L",
+				"Lato"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"analog",
+				"analogReads"
+			],
+			[
+				"digit",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"digi",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"minimize",
+				"minimizeEnergySpreadDFT"
+			],
+			[
+				"button",
+				"buttonState"
+			],
+			[
+				"int",
+				"int32_t"
+			],
+			[
+				"i",
+				"include"
+			],
+			[
+				"analo",
+				"analogRead\tArduino analogRead"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"arra",
+				"array\tArray"
+			],
+			[
+				"array",
+				"arraylist\tArrayList"
+			],
+			[
+				"stroke",
+				"stroke\tstrokeWeight"
+			],
+			[
+				"prin",
+				"println\tprintln var"
+			],
+			[
+				"var",
+				"varXspeed"
+			],
+			[
+				"backgrou",
+				"background\tbackground grey"
+			],
+			[
+				"setu",
+				"setup\tsetup"
+			],
+			[
+				"fill",
+				"fill\tfill rgb"
+			],
+			[
+				"strok",
+				"stroke\tstrokeWeight"
+			],
+			[
+				"frame",
+				"framerate\tframeRate (set)"
+			],
+			[
+				"random",
+				"randomColor"
+			],
+			[
+				"se",
+				"setup\tsetup"
+			],
+			[
+				"app",
+				"app"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "noisebox_remote/main.scd",
+			"settings":
+			{
+				"buffer_size": 5416,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "noisebox_remote/controls.scd",
+			"settings":
+			{
+				"buffer_size": 14295,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "noisebox_remote/polySynth.scd",
+			"settings":
+			{
+				"buffer_size": 8768,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "noisebox_display/display.py",
+			"settings":
+			{
+				"buffer_size": 4789,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Markdown Preview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Marked.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Marked.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Marked.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Marked.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					""
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Re-run sketch"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch (Processing 3 only)"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Run sketch fullscreen"
+				],
+				[
+					"Packages/Processing/Build Systems/Processing.sublime-build",
+					"Export sketch as application"
+				]
+			],
+			[
+				"Packages/Processing/Build Systems/Processing.sublime-build",
+				"Re-run sketch"
+			]
+		],
+		[
+			[
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					""
+				],
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					"just build"
+				],
+				[
+					"Packages/arduino-cli/arduino-cli.sublime-build",
+					"build and upload"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/arduino-cli/arduino-cli.sublime-build",
+				"build and upload"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 203.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package sear",
+				"Package Control: Discover Packages"
+			],
+			[
+				"read",
+				"ReadmePlease"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"readm",
+				"ReadmePlease"
+			],
+			[
+				"journ",
+				"MarkdownEditing: Open Journal"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdown pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"packag",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"latex package ",
+				"LaTeXTools: View TeX package documentation"
+			],
+			[
+				"latex",
+				"LaTeXTools: Check system"
+			],
+			[
+				"latex packages",
+				"LaTeXTools: Build cache of LaTeX packages"
+			],
+			[
+				"ftp",
+				"SFTP: Map to Remote…"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"latex pac",
+				"LaTeXTools: View TeX package documentation"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: __magic__"
+			],
+			[
+				"latex fold",
+				"LaTeXTools: Create mousemap in user folder"
+			],
+			[
+				"latex cite",
+				"LaTeXTools: Create mousemap in user folder"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"",
+				"Citer: Search"
+			],
+			[
+				"bibl",
+				"Set Syntax: BibLaTeX"
+			],
+			[
+				"Latex",
+				"LaTeXTools: View TeX package documentation"
+			],
+			[
+				"citer",
+				"Citer: Search"
+			],
+			[
+				"cit",
+				"Citer: Search"
+			],
+			[
+				"Citer",
+				"Citer: Search"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Super",
+				"SuperCollider: Get Method Arguments"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"super",
+				"SuperCollider: Help"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Package Control: Remove Channel"
+			],
+			[
+				"update",
+				"MarkdownTOC:Update TOC"
+			],
+			[
+				"toc",
+				"MarkdownTOC:Insert TOC"
+			],
+			[
+				"enab",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"subl",
+				"Sublimerge"
+			],
+			[
+				"lae",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"build",
+				"LaTeXTools: Build cache for LaTeX packages"
+			],
+			[
+				"enabl",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"reload",
+				"LiveReload: Self test"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"ena",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"hip",
+				"Hipster Ipsum: Occupy"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ipsum",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lor",
+				"Add some Lorem Gibson"
+			],
+			[
+				"lorenm",
+				"Add some Lorem Gibson"
+			],
+			[
+				"late",
+				"LaTeXTools: Toggle focus (PDF/editor)"
+			],
+			[
+				"la",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"lat",
+				"LaTeXTools: Toggle focus (PDF/editor)"
+			],
+			[
+				"lan",
+				"Dictionaries: Set Language"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"browser",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"borws",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"enA",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"PREV",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"brow",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"bro",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"cheat",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"mark",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"pan",
+				"Pandoc"
+			],
+			[
+				"ci",
+				"Citer: Show All"
+			],
+			[
+				"pand",
+				"Pandoc"
+			],
+			[
+				"Cit",
+				"Citer: Show All"
+			],
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"cite",
+				"Citer: Search"
+			],
+			[
+				"p",
+				"Pandoc"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"MArk",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"INST",
+				"Package Control: Install Package"
+			],
+			[
+				"recon",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"brows",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"browse",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"term",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"tex",
+				"LaTeXTools: Toggle focus (PDF/editor)"
+			],
+			[
+				"lex",
+				"LaTeXTools: Toggle focus (PDF/editor)"
+			],
+			[
+				"LAt",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"git",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"liv",
+				"LiveReload: Self test"
+			],
+			[
+				"ma",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"pyth",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"pythn",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"packages",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 506.0
+	},
+	"console":
+	{
+		"height": 249.0,
+		"history":
+		[
+			"import OSC",
+			"python",
+			"def hi()",
+			"def hi():",
+			"perm.py",
+			"perm",
+			"3+3",
+			"3+#",
+			"`ls",
+			"import ~/Documents/lpthw/fibo",
+			"import fibo",
+			"import ~/Documents/lpthw/fibo.py",
+			"ls",
+			"pydoc raw_input",
+			"while True:",
+			"while 1:",
+			"7 / 4",
+			"7.0 / 4.0",
+			"ls",
+			"run ex3.py",
+			"print(\"fuck\")",
+			"print(fuck)",
+			"print(\"Hello\")",
+			"version",
+			"which",
+			"print \"hello\"",
+			"print \"hello",
+			"ls",
+			"LiveReload: Enable/disable plugins ",
+			"ssh pi@169.254.0.11",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display"
+	],
+	"file_history":
+	[
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/display.py",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Design workshops/workshop1_script.md",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/development/Python/luma.examples/examples/clock.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/osc_receiver.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/luma.examples/examples/fonts/tiny.ttf",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/development/Python/display_emulator2.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/text_test.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/luma.examples/examples/weather.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/sftp-config.json",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/SFTP/Default (OSX).sublime-keymap",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/remote/controls.scd.bak",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/remote/sftp-config.json",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/remote/_noisebox_extras/noisebox_test.scd",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/noisebox",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/remote/default.scd",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/to_inst/remote/sftp-config.json",
+		"/Users/johnnyvenom/Documents/code/OpenCV.js/index2.html",
+		"/Users/johnnyvenom/Documents/PhD-5-Winter-2019/NIME-2019/nime-2019-template/nime-submission.pdf",
+		"/Users/johnnyvenom/Documents/PhD-5-Winter-2019/NIME-2019/nime-2019-template/nime-template.pdf",
+		"/Users/johnnyvenom/Documents/PhD-5-Winter-2019/NIME-2019/NIME-2019.sublime-workspace",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/johnnyvenom/Documents/PhD-5-Winter-2019/NIME-2019/nime-2019-template/nime-submission.tex",
+		"/Users/johnnyvenom/Documents/PhD-5-Winter-2019/NIME-2019/NIME-2019.sublime-project",
+		"/Volumes/JVenom 2TB/Projects/piano-bunny/README.md",
+		"/Users/johnnyvenom/Documents/Notational Data/Notes & Settings",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Designing Noisebox co-design workshops.md",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/MarkdownTOC/README.md",
+		"/Users/johnnyvenom/Documents/code/screenshot.py",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Designing Noisebox co-design workshops 2.md",
+		"/Users/johnnyvenom/Downloads/ContentServer",
+		"/Users/johnnyvenom/Documents/code/osc4py3/osc4py3_test.py",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Noisebox Longitudinal Study - summary/main_updated.tex",
+		"/Users/johnnyvenom/Documents/Notational Data/Quebec City 2018 Holiday plans.txt",
+		"/Users/johnnyvenom/Documents/code/osc4py3/osc4py3_send.py",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Designing Noisebox co-design workshops.yaml",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/MUMT302-Winter2019-waitlist.md",
+		"/Users/johnnyvenom/Documents/Notational Data/Noisebox longitudinal study meeting notes 2-Nov 2018.txt",
+		"/Users/johnnyvenom/Documents/Zwift/prefs.xml",
+		"/Users/johnnyvenom/Documents/Notational Data/Packing - Norway 13 days. .txt",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/notes.md",
+		"/Users/johnnyvenom/Documents/PhD-5-Fall-2018/Thesis Proposal/Sullivan_thesis_proposal/thesis_proposal.tex",
+		"/Users/johnnyvenom/Documents/PhD-5-Fall-2018/Thesis Proposal/Sullivan_thesis_proposal/notes.md",
+		"/Users/johnnyvenom/Documents/PhD-5-Fall-2018/Thesis Proposal/Sullivan_thesis_proposal/Thesis Proposal Template.tex",
+		"/Users/johnnyvenom/Downloads/looping_environment_YT_2011-07-11_COMMENTS.rtf",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/SuperCollider ST3/README.md",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Longitudinal_DMI_study_summary.md",
+		"/Users/johnnyvenom/Documents/Notational Data/FRQSC Scholarship application.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/CIRMMT Student Meeting Itinerary.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/Londitudinal Noisebox Study REB Application.txt",
+		"/Users/johnnyvenom/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.9BEAA58A-709D-4ABB-8745-F60E6932DF02/add.rb",
+		"/Users/johnnyvenom/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.9BEAA58A-709D-4ABB-8745-F60E6932DF02/base.rb",
+		"/Users/johnnyvenom/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.9BEAA58A-709D-4ABB-8745-F60E6932DF02/convert.rb",
+		"/Users/johnnyvenom/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.9BEAA58A-709D-4ABB-8745-F60E6932DF02/remove.rb",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/Teensy/cap_Prynth/Prynth.cpp",
+		"/Users/johnnyvenom/Documents/Arduino/libraries/Adafruit_10DOF/pitchrollheading/pitchrollheading.pde",
+		"/Users/johnnyvenom/Documents/code/python-osc/osc-client-ex.py",
+		"/Users/johnnyvenom/Documents/code/OSC-for-python/pyOSC-client-ex.py",
+		"/Users/johnnyvenom/Documents/code/OSC-for-python/pyOSC/examples/basic_receive.py",
+		"/Users/johnnyvenom/Documents/code/OSC-for-python/pyOSC/OSC.py",
+		"/Volumes/boot/wpa_supplicant.conf",
+		"/Users/johnnyvenom/Downloads/pyOSC_examples/basic_receive.py",
+		"/Users/johnnyvenom/Documents/code/python-osc/osc-server-ex.py",
+		"/Users/johnnyvenom/Documents/code/osc-server-ex.py",
+		"/Users/johnnyvenom/Documents/code/osc-client-ex.py",
+		"/Users/johnnyvenom/Documents/Notational Data/Apartment Rental Information August 2018.txt",
+		"/Users/johnnyvenom/Documents/Arduino/libraries/Adafruit_SSD1325_Library/Adafruit_SSD1325.h",
+		"/Applications/MAMP/htdocs/idmilJul2018/wp-content/themes/collective-child/functions.php",
+		"/Users/johnnyvenom/Library/Caches/Cleanup At Startup/Transmit/FD9DA368-05D8-463F-973E-976027920786/wp-config.php",
+		"/Users/johnnyvenom/Desktop/file_rename.py",
+		"/Users/johnnyvenom/Desktop/NIME_2018/file_rename",
+		"/Users/johnnyvenom/Library/Caches/Cleanup At Startup/Transmit/A6B7D2A4-B535-4746-85C0-A8FA9AE27C16/wp-config.php",
+		"/Volumes/idmil/test_reply.txt",
+		"/Users/johnnyvenom/Documents/Arduino/sketch_aug06a/Adafruit_MPR121.h",
+		"/Users/johnnyvenom/Documents/Arduino/sketch_aug06a/Adafruit_MPR121.cpp",
+		"/Users/johnnyvenom/Documents/Notational Data/Noisebox v4 notes.txt",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/cap_imu_Prynth/cap_imu_Prynth.ino/Adafruit_MPR121.cpp",
+		"/Users/johnnyvenom/Downloads/new-idmil-instructions.html",
+		"/Users/johnnyvenom/Downloads/index.html",
+		"/Users/johnnyvenom/Downloads/new-idmil-instructions.md",
+		"/Users/johnnyvenom/Documents/Notational Data/CIRMMT Student meetings notes.txt",
+		"/Users/johnnyvenom/.ssh/known_hosts",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-book-chapter/AUMI-chapter-proposal.md",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-book-chapter/Sullivan, Wanderley - 2018 - Stability, Reliability, Compatibility Reviewing 40 Years of DMI Design.bib",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-book-chapter/AUMI-chapter-proposal.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/MOCO ppt outline.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/Italian Phrasebook.txt",
+		"/Users/johnnyvenom/Documents/Projects/EMI-survey/results/EMI-survey-summary.md",
+		"/Users/johnnyvenom/Documents/Notational Data/Summer 2018 Conferences Packing.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/SMC 2018 paper review.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/UCD - user-centered design methodologies.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/22-May 2018 @todo.txt",
+		"/Users/johnnyvenom/Documents/Adobe/Premiere Pro/CIRMMT_Student_Symposium_2018_presentation_new/presentation_script",
+		"/Users/johnnyvenom/Documents/Projects/EMI-survey/results/user_profiles.md",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/MOCO2018-paper/drafts/moco2018-gestural-control/README",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/MOCO2018-paper/drafts/moco2018-gestural-control/sigconf.tex",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/MOCO2018-paper/final_submission/moco2018-gestural-control/image_representation.txt",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/MOCO2018-paper/drafts/moco2018-gestural-control/sigconf.pdf",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/MOCO2018-paper/acm-latex-template/acmart-master/sample-sigchi.tex",
+		"/Users/johnnyvenom/Documents/Adobe/Adobe Media Encoder/12.0/AMEEncodingLog.txt",
+		"/Users/johnnyvenom/Library/Caches/Cleanup At Startup/Transmit/69B44AAE-0563-43C1-87EA-2273093B6B5B/functions.php",
+		"/Users/johnnyvenom/Library/Caches/Cleanup At Startup/Transmit/DCB5EE9A-3000-4321-B861-A5AABDB38092/wp-config.php",
+		"/Users/johnnyvenom/Documents/Projects/piano-bunny/dist/piano-bunny_mac_v1.0/instructions.md",
+		"/Users/johnnyvenom/Documents/Notational Data/MOCO 2018 paper revisions.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/2-May 2018 @todo.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/grading/final_comments_and_grades.txt",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/grading/2018-05-02.md",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/User/MarkdownTOC.sublime-settings",
+		"/Users/johnnyvenom/Documents/Projects/EMI-survey/results/EMI survey initial summary.txt",
+		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/MarkdownTOC/MarkdownTOC.sublime-settings",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/grading/final_comments.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/grading/js/final_comments.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/evaluation/comments_JS.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/grading/if/ifcomments.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/evaluation/if/comments.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/evaluation/js/comments.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/Work ToDo in London @todo.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/17-April 2018 London prep @todo.txt",
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/bibliography.md",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/CIRMMT Student Project 2018/CIRMMT-student-award-2018.txt",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/dist/AUMI-UH/max-app/README.md",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/dist/AUMI-UH/standalone/README.md",
+		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/files/media/txt/leap.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/proposals/revised project proposals/revised-project-proposal-evals.txt",
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/proposals/project-proposal-evals.txt",
+		"/Users/johnnyvenom/Documents/Notational Data/11-Apr-2018 Today and tomorrow.txt",
+		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/ICMC 2018 for review/ICMC_2018_review_questions.txt"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 139.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"~send_to_display();"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"~send_to_display.value();"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "noisebox_remote/main.scd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3568,
+								3568
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 84,
+								"count": 382,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1708.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "noisebox_remote/controls.scd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8640,
+								8640
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 255,
+								"count": 763,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"sftp_duplicate_views": 0,
+							"synced": false,
+							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5710.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "noisebox_remote/controls.scd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7355,
+								7355
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 845,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"sftp_duplicate_views": 0,
+							"synced": false,
+							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4435.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "noisebox_remote/polySynth.scd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 162,
+								"count": 596,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "noisebox_display/display.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2406,
+								2406
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 554.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.372664240755,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.02_MPU6050_DMPdata_2":
+	{
+		"height": 102.0
+	},
+	"output.Arduino":
+	{
+		"height": 102.0
+	},
+	"output.ArduinoISP":
+	{
+		"height": 102.0
+	},
+	"output.Blink":
+	{
+		"height": 0.0
+	},
+	"output.Dimmer":
+	{
+		"height": 102.0
+	},
+	"output.HC-SR04_demo":
+	{
+		"height": 102.0
+	},
+	"output.MPU6050_DMP6":
+	{
+		"height": 102.0
+	},
+	"output.MPU6050_DMP6_teapot.ino":
+	{
+		"height": 102.0
+	},
+	"output.MPU6050_DMPdata_2.1":
+	{
+		"height": 102.0
+	},
+	"output.MPU6050_DMPdata_2.2":
+	{
+		"height": 102.0
+	},
+	"output.MPU6050_raw":
+	{
+		"height": 102.0
+	},
+	"output.PIRinterruptTest":
+	{
+		"height": 114.0
+	},
+	"output.PIRtest":
+	{
+		"height": 114.0
+	},
+	"output.PITinterruptTimerTest":
+	{
+		"height": 114.0
+	},
+	"output.SerialCommunication_Bitshifting":
+	{
+		"height": 114.0
+	},
+	"output.SerialOscuinowithMessages":
+	{
+		"height": 102.0
+	},
+	"output.SerialSendMessage":
+	{
+		"height": 187.0
+	},
+	"output.asciitable":
+	{
+		"height": 102.0
+	},
+	"output.build|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423768039.680694":
+	{
+		"height": 114.0
+	},
+	"output.button":
+	{
+		"height": 102.0
+	},
+	"output.exec":
+	{
+		"height": 99.0
+	},
+	"output.find_results":
+	{
+		"height": 377.0
+	},
+	"output.hangupSerial":
+	{
+		"height": 102.0
+	},
+	"output.interrupt_ex":
+	{
+		"height": 114.0
+	},
+	"output.latextools":
+	{
+		"height": 243.0
+	},
+	"output.led-rgb-example":
+	{
+		"height": 114.0
+	},
+	"output.markdown":
+	{
+		"height": 114.0
+	},
+	"output.multiple-processes":
+	{
+		"height": 114.0
+	},
+	"output.noiseboxOSC":
+	{
+		"height": 102.0
+	},
+	"output.noiseboxOSC_DMPdata.ino":
+	{
+		"height": 266.0
+	},
+	"output.phone":
+	{
+		"height": 102.0
+	},
+	"output.photoboothFullPatch2":
+	{
+		"height": 206.0
+	},
+	"output.photoboothLEDtest":
+	{
+		"height": 114.0
+	},
+	"output.photobooth_button":
+	{
+		"height": 102.0
+	},
+	"output.receive-serial":
+	{
+		"height": 102.0
+	},
+	"output.ringer-and-hangup":
+	{
+		"height": 102.0
+	},
+	"output.ringer_and_hangup":
+	{
+		"height": 102.0
+	},
+	"output.serialMaxToArduino":
+	{
+		"height": 102.0
+	},
+	"output.sftp":
+	{
+		"height": 261.0
+	},
+	"output.sketch_oct21b":
+	{
+		"height": 107.0
+	},
+	"output.sketch_oct22a":
+	{
+		"height": 102.0
+	},
+	"output.softpot_test":
+	{
+		"height": 233.0
+	},
+	"output.stino_log":
+	{
+		"height": 114.0
+	},
+	"output.test1":
+	{
+		"height": 102.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 162.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427392663.777564":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427392674.665125":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427393749.490359":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427393765.591612":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394248.628885":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394270.475264":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394570.287313":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394592.318509":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394614.74251":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394628.237942":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394715.208209":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394776.727073":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394817.102281":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/01.Basics/Blink|1427394929.865528":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/examples/Teensy/Tutorial1/Blink|1436715733.046729":
+	{
+		"height": 156.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Analysis/DialTone_7segment|1427404217.306887":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Analysis/DialTone_Serial|1427404769.628071":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Analysis/FFT|1427402737.577653":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Analysis/FFT|1427402926.480439":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Effects/Delay|1427403319.407005":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/HardwareTesting/SdCardTest|1427401709.001622":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Synthesis/PlaySynthMusic|1427403657.820546":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/Synthesis/pulseWidth|1427404142.887391":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/WavFilePlayer|1427400400.720023":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/WavFilePlayer|1427402242.131371":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Applications/arduino.app/Contents/Resources/Java/libraries/Audio/examples/WavFilePlayer|1427402292.374683":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/buttontest|1424644992.505804":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/buttontest|1424645002.087286":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/buttontest|1424645021.859337":
+	{
+		"height": 247.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423754288.275267":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423754321.924026":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423754644.945274":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423758771.451841":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423758798.030875":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423758848.779801":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423758998.173023":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423759004.302019":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/libraries/OSC/examples/SerialSendMessage|1423759019.927815":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/serial_OSC_test|1423759924.303322":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/serial_OSC_test|1423759930.7154":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/serial_OSC_test|1423759961.797467":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/serial_OSC_test|1423760024.403999":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyButton|1427395629.074322":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyButton|1427395646.19395":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyButton|1427395764.677352":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyFFTplayground|1427403087.721929":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyFFTplayground|1427403201.165916":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyRGB|1427395032.364999":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyRGB|1427395054.948311":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyRGB|1427396328.588825":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyRGB|1427396363.467486":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Arduino/teensyRGB|1427396602.329206":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch2|1423586779.484163":
+	{
+		"height": 402.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423586831.186943":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423588698.596748":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423588718.70601":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423588728.147189":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423588817.894496":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423588826.665054":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589576.757229":
+	{
+		"height": 218.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589740.588422":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589823.719791":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589847.94218":
+	{
+		"height": 263.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589946.61686":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423589959.472175":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590155.341661":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590242.240899":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590321.157588":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590483.843544":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590608.130447":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590650.202618":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590725.222561":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590738.330928":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590797.76209":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423590933.434787":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423594589.691704":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423594692.356136":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423594763.356188":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423594870.977799":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595029.161593":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595205.096357":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595356.448822":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595704.918603":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595740.684142":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595810.99265":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423595870.241925":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423596091.809157":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423596288.543121":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423596390.937794":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423597279.077102":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423597394.12679":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423597465.487616":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423597509.117084":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423597874.101042":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598156.636383":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598444.35763":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598560.467212":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598671.428183":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598845.627359":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423598889.304778":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423600245.421457":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423600284.779381":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423606726.28735":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423606746.966116":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423613532.412392":
+	{
+		"height": 228.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423613631.078896":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423613871.192575":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423613917.958144":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423614133.017894":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423614276.545513":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423614360.418707":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423614767.089921":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423614994.543023":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423615384.92768":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423615602.796092":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423615659.488262":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423615839.181256":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423615847.637063":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616112.202496":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616283.933601":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616427.881023":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616646.05057":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616770.477472":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423616863.355013":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423617068.500368":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423617748.286514":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423617860.779111":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423617911.513496":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423617996.904861":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423618787.565212":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423618934.508715":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423619500.222741":
+	{
+		"height": 0.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423619538.713224":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423619694.817797":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423683810.469406":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423683935.662071":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423683988.748689":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684037.394846":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684146.525643":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684201.899574":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684284.617641":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684344.933911":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684799.594927":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423684887.127124":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685109.797969":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685210.305234":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685273.371604":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685393.514345":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685483.246285":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685549.084142":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423685917.204062":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423687815.85411":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423688008.574185":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch3|1423688047.020434":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424629218.707395":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424629693.091347":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424629730.710468":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424629847.493808":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424630957.200523":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424631093.621476":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424631683.823683":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424631830.905285":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632121.388564":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632235.349153":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632360.666454":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632373.097519":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632467.565662":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424632632.686379":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424635275.407029":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev2|1424636477.664471":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev3|1424638241.031206":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev3|1424638260.174937":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741175.938493":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741214.960042":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741402.752788":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741505.650308":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741511.018202":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741539.539082":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741732.667096":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741747.094489":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741802.144284":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741831.972445":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741927.78769":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424741984.888857":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742042.366648":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742073.99757":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742156.002227":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742184.317816":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742210.472219":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4_rev5|1424742327.059301":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690364.58181":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690397.744062":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690437.785906":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690604.819326":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690666.27273":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690686.095975":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690786.491196":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690885.279657":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423690994.315136":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423691294.408308":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423691860.935771":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692259.118779":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692405.664166":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692440.497315":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692519.957848":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692783.433947":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423692900.957552":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423693024.799519":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423715121.315617":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423761204.145709":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423761240.404851":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423763327.987334":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423763336.392841":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423767746.911811":
+	{
+		"height": 696.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423767838.85896":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423767878.793633":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423767903.047757":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423767926.102679":
+	{
+		"height": 470.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423768061.320178":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423768110.205972":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1423768611.541845":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1424044541.249455":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-1/photobooth/photoboothFullPatch4|1424044819.487179":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup_rev2|1424452836.755359":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424401859.55359":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424402732.669305":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424402929.572928":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424402947.209858":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424402986.17607":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424403009.455448":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424403375.164183":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424403412.701329":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424403429.556514":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424403448.779783":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424404712.399766":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424404729.98079":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424404932.772066":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/Deipno/Module-2/phone/current-versions/ringer_and_hangup|1424405084.598147":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392047.917042":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392513.727563":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392523.359512":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392537.070654":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392549.870014":
+	{
+		"height": 114.0
+	},
+	"output.upload|/Users/johnnyvenom/Documents/code/teensy/Audio/examples/HardwareTesting/ToneSweep|1427392601.212126":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/101184|1423594738.105049":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/136274|1423595689.139296":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/246611|1423595863.250195":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/430528|1423616649.435024":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/548733|1423685243.556135":
+	{
+		"height": 114.0
+	},
+	"output.upload|/tmp/Arduino/882987|1423590424.88705":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "",
+	"project": "Noisebox-2019.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"readm",
+				"README.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/PhD-4-Winter-2017/NIME-2017/NIME-2017.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"fss_on_distraction_free": false,
+		"fss_on_full_screen": false
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 289.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

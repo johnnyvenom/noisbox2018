@@ -1,4 +1,5 @@
 *.DS_store
 development/Python/luma.examples
+development/Python/luma.emulator
 .DS_Store
 imgs_and_libs
