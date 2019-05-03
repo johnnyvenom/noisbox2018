@@ -134,14 +134,6 @@
 			{ "knob2" } { ~knob2.value(msg[1]); ~updateDisplay.value(6, msg[1]) }
 			{ "knob3" } { ~knob3.value(msg[1]); ~updateDisplay.value(7, msg[1]) }
 			{ "knob4" } { ~knob4.value(msg[1]); ~updateDisplay.value(8, msg[1]) };
-			// { "button1" } { ~button1.value(msg[1]) }
-			// { "button2" } { ~button2.value(msg[1]) }
-			// { "button3" } { ~button3.value(msg[1]) }
-			// { "button4" } { ~button4.value(msg[1]) }
-			// { "knob1" } { ~knob1.value(msg[1]) }
-			// { "knob2" } { ~knob2.value(msg[1]) }
-			// { "knob3" } { ~knob3.value(msg[1]) }
-			// { "knob4" } { ~knob4.value(msg[1]) };
 	}, addr);
 });
 
@@ -203,7 +195,8 @@
 
 // knob and button updates
 ~updateDisplay = {
-	// call with the following arguments: [1] index (buttons 1-4, knobs 5-8), [2] actual value, [3] label, [4] normalized value (0-1) for knob only
+	// call with 2 arguments: index (1 - 8), val (input value, this is ignored for knobs, but button only fires with value of 1).
+	// the actual data is taken from ~d, depending on which page of controls is active
 	arg index, val;
 		
 	var page, inst, ctl, type, outVal, normVal, addr;
@@ -216,11 +209,9 @@
 	ctl = ~dMap[page][index]; //**** <----- need to update the args when it is called!!!!!
 	type = if (index < 5, {"button"}, {"knob"});
 	
+	addr = "/display/"++type++"/"++(index-1%4+1);
 	
-	if (ctl != nil, { // ignore if control is not mapped
-		addr = "/display/"++type++"/"++(index-1%4+1);
-
-		// m.sendMsg(addr++"label", ~d[inst][ctl].label);
+	if (ctl != nil, { 
 		
 		switch(type,
 			"knob", {
@@ -231,7 +222,7 @@
 				// knob.postln;
 
 				~newKnobVals[index-5] = [addr, knob[0], knob[1], knob[2]];
-				~send_to_display.value();
+				// ~send_to_display.value();
 				// m.sendMsg(addr, knob[0], knob[1], knob[2]);
 			},
 			"button", {
@@ -241,21 +232,29 @@
 					button[1] = ~d[inst][ctl].label;
 
 					~newButtonVals[index-1] = [addr, button[0], button[1]];
-					~send_to_display.value();
+					// ~send_to_display.value();
 					// m.sendMsg(addr, button[0], button[1]);
 				});
 			}
 		);
-
-
-		[page, inst, ctl, type, addr, ~d[inst][ctl].outVal.round(0.001)].postln;
-	}, {
-		~glob[\pageName][~glob[\page]].toUpper.post;
-		" ".post;
-		type.post;
-		index-1%4+1.post;
-		" isn't mapped".postln;
+		// [page, inst, ctl, type, addr, ~d[inst][ctl].outVal.round(0.001)].postln;
+	}, 
+	{
+		switch(type,
+			"knob", {
+				"unmapped knob".postln;
+				~newKnobVals[index-5] = [addr, 0, 0, "---"];
+				// ~send_to_display.value();
+			},
+			"button", {
+				"unmapped button".postln;
+				~newButtonVals[index-1] = [addr, " ", "---"];
+				// ~send_to_display.value();
+			}
+		);
 	});
+
+	~send_to_display.value();
 };
 
 // SEND OSC MESSAGES ON A CONTROLLABLE SCHEDULE
@@ -263,6 +262,37 @@ m = NetAddr(~ip, ~port); // establish connection to display (Python)
 
 ~prevTime = 0.0; // global var to store the last OSC send interval
 ~sendInterval = 0.05; 
+
+/*
+~send_to_display = {
+	// check time and send messages
+	var currentTime = thisThread.seconds;
+
+	if(currentTime > (~prevTime + ~sendInterval), {
+		if(~currentTitleVal != ~newTitleVal, { // if new value is present
+			m.sendMsg(~newTitleVal[0], ~newTitleVal[1]); // send it
+			~currentTitleVal = ~newTitleVal; // update current
+			// "sending title".postln;
+		});
+
+		4.do({
+			| i |			
+			if(~currentKnobVals[i] != ~newKnobVals[i], { // if new value is present
+				m.sendMsg(~newKnobVals[i][0], ~newKnobVals[i][1], ~newKnobVals[i][2], ~newKnobVals[i][3]); // send it
+				~currentKnobVals[i] = ~newKnobVals[i]; // update current
+				// "sending knob".postln;
+			});
+			if(~currentButtonVals[i] != ~newButtonVals[i], { // if new value is present
+				m.sendMsg(~newButtonVals[i][0], ~newButtonVals[i][1], ~newButtonVals[i][2]); // send it
+				~currentButtonVals[i] = ~newButtonVals[i]; // update current
+				// "sending button".postln;
+			});
+		});
+		// "Done OSC send".postln;	
+		~prevTime = thisThread.seconds;
+	});
+}; 
+*/
 
 ~send_to_display = {
 	// check time and send messages
@@ -319,78 +349,36 @@ m = NetAddr(~ip, ~port); // establish connection to display (Python)
 // 4 -> Looper -
 // *************
 
-// @TODO: the correct controls aren't showing up when the display is changed, but the correct title is. NEED TO FIX. 
-
-
 // CHANGE PAGES OF CONTROLS
 ~page_shift = {
+	// Changes ~glob[\page] to correct control mapping, and
+	// sends updated display title, knob and button values. 
+
 	arg dir, val; // dir = up or down; val = 1 pressed, 0 released (ignore)
 	
 	var knob = Array.newClear(3); // hold temp knob vals to send
 	var button = Array.newClear(2); // hold temp button vals to send
 
-	var min = 0, max = 4;
+	var min = 0, max = 4; // number of pages of controls
+
 	if (val == 1, {
 		~glob[\page] = switch (dir)
+			// update ~glob[\page]
 			{"up"} { if (~glob[\page] < max, ~glob[\page] + 1, ~glob[\page]) }
 			{"down"} { if (~glob[\page] > min, ~glob[\page] - 1, ~glob[\page]) };
 		("Page: " + ~glob[\page]).postln;
-
+ 
+		// update display title
 		~updateDisplayTitle.value(~glob[\pageName][~glob[\page]]);
 
+		// update display buttons and knobs 
 		8.do({
 			| index |
-			var type, addr, inst, ctl;
-			type = if (index < 4, {"button"}, {"knob"});
-			addr = "/display/"++type++"/"++(index%4+1);
-			if (~dMap[~glob[\page]][index+1] != nil,
-				{
-					inst = ~dMap[~glob[\page]][0];
-					ctl = ~dMap[~glob[\page]][index+1];
-					
-					switch(type,
-						"knob", {
-							// update knobs to new page
-							knob[0] = ~d[inst][ctl].outVal;
-							knob[1] = ~d[inst][ctl].normVal;
-							knob[2] = ~d[inst][ctl].label;
-							knob.postln;
-
-							~newKnobVals[index-4] = [addr, knob[0], knob[1], knob[2]];
-							~send_to_display.value();
-							// m.sendMsg(addr, knob[0], knob[1], knob[2]);
-						},
-						"button", {
-							// update buttons to new page
-							button[0] = ~d[inst][ctl].normVal;
-							button[1] = ~d[inst][ctl].label;
-
-							~newButtonVals[index] = [addr, button[0], button[1]];
-							~send_to_display.value();
-							// m.sendMsg(addr, button[0], button[1]);
-							button.postln;
-						}
-					);
-				},
-				{
-					// update blank controls when page is switched
-					switch(type,
-						"knob", {
-							
-							~newKnobVals[index-4] = [addr, 0, 0, "---"];
-							~send_to_display.value();
-							// m.sendMsg(addr, knob[0], knob[1], knob[2]);
-						},
-						"button", {
-							~newButtonVals[index] = [addr, " ", "---"];
-							~send_to_display.value();
-							// m.sendMsg(addr, button[0], button[1]);
-						}
-					);
-				}
-			);
+			index = index + 1;
+			~updateDisplay.value(index, 1);
 		});
 	});
+
 };
 
 // CHANGE OCTAVES ON KEYBOARD
@@ -410,7 +398,7 @@ m = NetAddr(~ip, ~port); // establish connection to display (Python)
 	arg val;
 	~glob[\volume] = val.linlin(0, 1, 0.001, 1);
 	~master.set(\masterVol, ~glob[\volume]);
-	~glob[\volume].postln;
+	// ~glob[\volume].postln;
 };
 
 // KNOB AND BUTTON MAPPINGS

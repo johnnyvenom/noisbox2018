@@ -1,4 +1,5 @@
 // variable length looper for Noisebox
+//tesst!!!
 
 // init params for display
 fork({
@@ -6,10 +7,10 @@ fork({
 		// stuff
 		[\loopRate, "Rate", \knob, 1, 1.linlin(-4,6,0,1)],
 		[\loopSrcMix, "Source", \knob, 0.5, 0.5],
-		[\loopRecDub, "Rec/Dub", \button, 0, " "],
-		[\loopPlayStop, "Ply/Stp", \button, 0, " "],
+		[\loopRecDub, "Rec", \button, 0, " "],
+		[\loopPlayStop, "Play", \button, 0, " "],
 		[\loopClearBuf, "Clear", \button, 0, " "],
-		[\loopMuteExt, "MuteExt", \button, 0, " "]
+		[\loopMuteExt, "Mute", \button, 0, " "]
 	];
 
 	~d.looper = ();
@@ -28,7 +29,7 @@ fork({
 ~loop = ();
 ~loop.state = 0;
 ~loop.extIn = 1;
-~loop.rateMinMax = [-4, 6]; // loop rate max/min control
+~loop.rateMinMax = [-2, 2]; // loop rate max/min control
 ~loop.maxLength = 60; // seconds
 ~loop.buf = Buffer.alloc(s, ~loop.maxLength * s.sampleRate, 2); // hold our loop
 
@@ -226,7 +227,7 @@ Looper states:
 				~phasor.set(\which, 1); // loop to timer, not max length
 				~record.free;
 			};
-			~loop.state = 3;
+			~loop.state = 3; 
 		},
 		2, { // play/stop pressed when overdubbing
 			// stop playing

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"fork\tfork"
+			],
+			[
 				"~sen",
 				"~send_to_display"
 			],
@@ -295,42 +299,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "noisebox_remote/main.scd",
-			"settings":
-			{
-				"buffer_size": 5416,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "noisebox_remote/controls.scd",
-			"settings":
-			{
-				"buffer_size": 14295,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "noisebox_remote/polySynth.scd",
-			"settings":
-			{
-				"buffer_size": 8768,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "noisebox_display/display.py",
-			"settings":
-			{
-				"buffer_size": 4789,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -984,15 +952,23 @@
 	],
 	"file_history":
 	[
+		"/Users/johnnyvenom/Dropbox/MUMT 302/2019/Final Project/presentation_notes_johnny.txt",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote/main.scd",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote/looper.scd",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote/controls.scd",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote/sftp-config.json",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_remote/polySynth.scd",
+		"/Users/johnnyvenom/Documents/Notational Data/COBS Symposium Review committee.txt",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/sftp-config.json",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/display.py",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_build_notes.md",
+		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/osc_receiver.py",
 		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/Design workshops/workshop1_script.md",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/development/Python/luma.examples/examples/clock.py",
-		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/osc_receiver.py",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/luma.examples/examples/fonts/tiny.ttf",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/development/Python/display_emulator2.py",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/text_test.py",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/luma.examples/examples/weather.py",
-		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/noisebox_display/sftp-config.json",
 		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/SFTP/Default (OSX).sublime-keymap",
 		"/Users/johnnyvenom/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/johnnyvenom/Documents/Projects/Noisebox-2018/remote/controls.scd.bak",
@@ -1103,19 +1079,11 @@
 		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/evaluation/js/comments.txt",
 		"/Users/johnnyvenom/Documents/Notational Data/Work ToDo in London @todo.txt",
 		"/Users/johnnyvenom/Documents/Notational Data/17-April 2018 London prep @todo.txt",
-		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/bibliography.md",
-		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/CIRMMT Student Project 2018/CIRMMT-student-award-2018.txt",
-		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/dist/AUMI-UH/max-app/README.md",
-		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/dist/AUMI-UH/standalone/README.md",
-		"/Users/johnnyvenom/Documents/Projects/AUMI-dev/files/media/txt/leap.txt",
-		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/proposals/revised project proposals/revised-project-proposal-evals.txt",
-		"/Users/johnnyvenom/Dropbox/MUMT 302/2018/final projects/proposals/project-proposal-evals.txt",
-		"/Users/johnnyvenom/Documents/Notational Data/11-Apr-2018 Today and tomorrow.txt",
-		"/Users/johnnyvenom/Documents/Phd-5-Winter-2018/ICMC 2018 for review/ICMC_2018_review_questions.txt"
+		"/Users/johnnyvenom/Documents/Projects/Longitudinal Noisebox Study 2018/bibliography.md"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -1130,6 +1098,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"val",
+			"postln",
 			"~send_to_display();"
 		],
 		"highlight": true,
@@ -1149,222 +1119,13 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "noisebox_remote/main.scd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5416,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3568,
-								3568
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 84,
-								"count": 382,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1708.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "noisebox_remote/controls.scd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8640,
-								8640
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 255,
-								"count": 763,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sftp_duplicate_views": 0,
-							"synced": false,
-							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5710.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 1,
-					"file": "noisebox_remote/controls.scd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7355,
-								7355
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 845,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sftp_duplicate_views": 0,
-							"synced": false,
-							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4435.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "noisebox_remote/polySynth.scd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								300,
-								300
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 162,
-								"count": 596,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/SuperCollider ST3/SuperCollider.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "noisebox_display/display.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4789,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2406,
-								2406
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "python"
-							},
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 554.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1396,7 +1157,7 @@
 		"cols":
 		[
 			0.0,
-			0.372664240755,
+			0.44195821883,
 			1.0
 		],
 		"rows":
@@ -2638,7 +2399,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 289.0,
+	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -73,8 +73,6 @@ fork{
 	"controls.scd".loadRelative; // contains OSCdefs and input functions.
 	s.sync;
 	
-	// ~updateDisplayTitle.value(~glob[\pageName][~glob[\page]]);
-	
 	"Starting global synths ".post;
 	5.do({ 0.1.wait; ". ".post;}); 0.2.wait; "".postln;
 
@@ -90,7 +88,7 @@ fork{
 		var inSig = In.ar(in, 2);
 		// put fx here...
 		// ...
-		// ...
+		// .....
 		// ...
 		Out.ar(out, inSig);
 	}).add;
@@ -110,7 +108,8 @@ fork{
 	~master = Synth.new(\master, [\in, ~abus.master, \out, 0, \masterVol, ~glob[\volume]], ~grp.master);
 
 	s.sync;
-	// 0.5.wait;
+
+	~glob[\page] = 0; 
 	~page_shift.value("down", 1); // initialize the display!
 	
 	"".postln;
